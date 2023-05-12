@@ -1,0 +1,609 @@
+@import url("//cdn.web-fonts.ge/fonts/alk-rex-bold/css/alk-rex-bold.min.css");
+
+/* GLOBAL STYLES*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ALK Rex Bold', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    height: 500vh;
+    overflow-x: hidden;
+    background-image: url(/images/goa-bg.jpg);
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.main-bg-cover {
+    width: 100%;
+    height: 550vh;
+    position: absolute;
+    background: rgba(23, 39, 7, 0.41);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(20.7px);
+    z-index: -99;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.inv {
+    width: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    height: 10px;
+    position: absolute;
+}
+
+#first {
+    top: 0;
+}
+
+#second {
+    top: 940px;
+}
+
+#third {
+    top: 1845px;
+}
+
+#fourth {
+    top: 3900px;
+}
+
+    /* width */
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #021f03;
+}
+  
+    /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+  
+    /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(33, 125, 5);
+    border-radius: 10px;
+}
+
+    /* MAIN STYLES */
+
+/* HEADER */
+
+.logo-img {
+    position: relative;
+    width: 100px;
+    border-radius: 50%;    
+    cursor: pointer;
+    border: 1px solid #fff;
+    transition: .5s;
+    margin-left: 200px;
+}
+
+.logo-img:hover {
+    box-shadow: 0 0 30px #0b5215;
+}
+
+header {
+    width: 100%;
+    height: 140px;
+    background: rgb(28, 52, 22);
+    background: linear-gradient(90deg, rgba(66,99,58,0.1) 0%, rgba(27,73,25,0.1) 0%, rgba(34,73,10,0.1) 50%, rgba(168,189,168,0.1) 100%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+}
+
+.header-sticky {
+    background: linear-gradient(90deg, rgba(66,99,58,0.4) 0%, rgba(27,73,25,0.5) 0%, rgba(34,73,10,0.5) 50%, rgba(168,189,168,0.3) 100%);
+}
+
+nav {
+    margin-right: 150px;
+}
+
+header ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+}
+
+header li {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+    text-shadow: 0 0 3px #53f669;
+    font-size: 1.8rem;
+    margin: 0 50px;
+}
+    
+header li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #53f669;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+    
+li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* MAIN */
+
+.home {
+    width: 1100px;
+    height: 650px;
+    border-radius: 10px;
+    outline: 1px solid #fff;
+    background: rgb(66,99,58);
+    background: linear-gradient(90deg, rgba(66,99,58,0.3) 0%, rgba(27,73,25,0.5) 0%, rgba(34,73,10,0.5) 50%, rgba(168,189,168,0.3) 100%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 2%;
+    padding: 30px;
+    overflow: hidden
+}
+
+.hero-txt {
+    color: white;
+    font-size: 2.8rem;
+    word-spacing: 15px;
+    letter-spacing: 2px;
+    opacity: .8;
+    text-shadow: 0 0 10px #069a37;
+    cursor: default;
+    margin: 30px 0;
+    transition: .5s;
+}
+
+.hero-txt:hover {
+    text-shadow: 0 0 30px #0b5215;
+}
+
+.desc-cont h2 {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    text-decoration: underline;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(1, 63, 3); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+        typing 2s steps(40, end),
+        blink-caret 1s step-end infinite;
+}
+
+ol {
+    margin: 50px;
+}
+
+ol li {
+    margin: 10px;
+    font-size: 1rem;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(0, 255, 51); }
+}
+
+/* COURSES */
+
+.courses {
+    position: relative;
+    margin-top: 350px;
+    width: 1500px;
+    height: 700px;
+    border-radius: 10px;
+    outline: 1px solid #fff;
+    background: rgb(66,99,58);
+    background: linear-gradient(90deg, rgba(66,99,58,0.3) 0%, rgba(27,73,25,0.5) 0%, rgba(34,73,10,0.5) 50%, rgba(168,189,168,0.3) 100%);
+    display: flex;
+    padding: 50px;
+}
+
+.courses section {
+    padding: 0 50px;
+}
+
+.tech {
+    width: 50%;
+    height: 100%;
+}
+
+
+.graphical {
+    width: 50%;
+    height: 100%;
+}
+
+.title {
+    font-size: 2.7rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tech .title {
+    text-shadow: 0 0 10px #53f669;
+}
+
+.graphical .title {
+    text-shadow: 0 0 10px rgb(219, 75, 133);
+}
+
+.courses .cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cont ul {
+    margin: 10px 30px;
+    position: relative;
+}
+
+.list li {
+    margin: 15px;
+    letter-spacing: 2px;
+    text-align: center;
+    list-style-type: none;
+}
+
+.cont-list h2 {
+    margin-bottom: 25px;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 0 0 20px #53f669;
+}
+
+.graphical h2 {
+    text-shadow: 0 0 20px rgb(219, 75, 133);
+}
+
+.cont p {
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+button {
+    border: none;
+    outline: none;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .5s;
+    color: #0b5215;
+    position: relative;
+    left: 34%;
+}
+
+.graphical button {
+    margin-left: 25px;
+}
+
+button:hover {
+    border: 3px solid white;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+}
+
+/* ABOUT */
+
+.about {
+    width: 1100px;
+    height: 1760px;
+    position: relative;
+    border-radius: 10px;
+    outline: 1px solid #fff;
+    background: rgb(66,99,58);
+    background: linear-gradient(90deg, rgba(66,99,58,0.3) 0%, rgba(27,73,25,0.5) 0%, rgba(34,73,10,0.5) 50%, rgba(168,189,168,0.3) 100%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;   
+    color: #fff;
+    overflow: hidden;
+    top: 200px;
+}
+
+.about h1 {
+    color: white;
+    font-size: 3.4rem;
+    word-spacing: 15px;
+    letter-spacing: 2px;
+    opacity: .8;
+    text-shadow: 0 0 10px #069a37;
+    cursor: default;
+    margin-bottom: 10px;
+    transition: .5s;
+    margin-bottom: 25px;
+}
+
+.about h1:hover {
+    text-shadow: 0 0 30px #0b5215;
+}
+
+.about section {
+    width: 100%;
+    padding: 30px 100px;
+}
+
+.about h2 {
+    font-size: 1.3rem;
+}
+
+.about .sec-h2 {
+    font-size: 1.6rem;
+}
+
+.about section ul {
+    list-style: circle;
+}
+
+.about section ul li {
+    margin: 20px;
+    font-size: 1rem;
+    position: relative;
+}
+
+.about section p {
+    font-size: .9rem;
+    line-height: 2em;
+    margin-top: 20px;
+}
+
+.c4 {
+    list-style-type: none;
+}
+
+.c4 span {
+    text-decoration: underline;
+}
+
+.c4 li::before {
+    content: '✓';
+    margin-right: 5px;
+}
+
+.arrow-cont {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.arrow {
+    color: white;
+    font-size: 3.4rem;
+    word-spacing: 15px;
+    letter-spacing: 2px;
+    opacity: .8;
+    text-shadow: 0 0 10px #069a37;
+    transition: .5s;
+    animation: bounce 2s infinite;
+}
+
+.projects {
+    width: 90%;
+    height: 100%;
+    margin: 20px 0;
+}
+
+.row {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.row h4 {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.row img {
+    width: 300px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.x {
+    transition: .5s;
+    
+}
+
+.x:hover {
+    scale: 1.1;
+}
+
+.sec-row h4 {
+    margin-top: 15px;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+
+/* CONTACT */
+
+.contact {
+    width: 1100px;
+    height: 650px;
+    position: absolute;
+    border-radius: 10px;
+    outline: 1px solid #fff;
+    background: rgb(66,99,58);
+    background: linear-gradient(90deg, rgba(66,99,58,0.3) 0%, rgba(27,73,25,0.5) 0%, rgba(34,73,10,0.5) 50%, rgba(168,189,168,0.3) 100%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;   
+    color: #fff;
+    top: 4100px;
+    overflow: hidden;
+}
+
+.hero-txt {
+    color: white;
+    font-size: 3.4rem;
+    word-spacing: 15px;
+    letter-spacing: 2px;
+    opacity: .8;
+    text-shadow: 0 0 10px #069a37;
+    cursor: default;
+    margin-bottom: 10px;
+    transition: .5s;
+    margin-bottom: 25px;
+}
+
+.hero-txt:hover {
+    text-shadow: 0 0 30px #0b5215;
+}
+
+.contact {
+    display: flex;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+input, textarea, button {
+    margin: 15px;
+    width: 150px;
+    height: 50px;
+}
+
+input, textarea {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+textarea {
+    resize: none;
+    width: 350px;
+    height: 150px;
+    overflow: hidden;
+}
+ 
+input, textarea {
+    background-color: rgba(0, 0, 0, 0.1);
+    outline: 1px solid white;
+    border: none;
+}
+
+textarea:focus, input:focus {
+    color: #0ce01a;
+}
+
+input, select, textarea{
+    color: #fff;
+}
+
+.lil-box {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 30%;
+}
+
+.contact-sect {
+    width: 90%;
+    height: 70%;
+    background-color: rgba(20, 85, 21, 0.206);
+    border-radius: 10px;
+    position: relative;
+}
+
+.lil-box {
+    position: absolute;
+    right: -50px;
+    background: rgba(53, 252, 42, 0.184);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.contact p a {
+    font-size: 1rem;
+    position: relative;
+    left: 10px;
+}
+
+.contact button {
+    position: relative;
+    left: 0%;
+}
+
+.contact div img {
+    width: 25px;
+}
+
+.yt img {
+    width: 35px !important;
+}
+
+.yt {
+    position: relative;
+    right: 3px;
+}
+
+.contact .cont {
+    display: flex;
+    width: 170px;
+    position: relative;
+    margin: 10px;
+}
+
+.yt p {
+    position: relative;
+    top: 7px;
+    right: 5px;
+}

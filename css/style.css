@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Roboto Mono', monospace;
+    background-image: url(/images/goa-clean-bg.png);
+    background-size: cover;
+    color: white;
+}   
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Roboto Mono', monospace;
+    background-image: url(../images/goa-clean-bg.png);
+    background-size: cover;
+    background-color: black;
+}
+
+canvas {
+    position: absolute;
+    z-index: 99;
+    opacity: 1;
+    width: 100%;
+    animation-name: canvaAnimation;
+    animation-duration: 11s;
+    animation-fill-mode: forwards;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    z-index: 999;
+    width: 60%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 1px solid white;
+    transition: .6s ease-out;
+    background: transparent radial-gradient(at calc(var(--mouse-x, 0) * 100%) calc(var(--mouse-y, 0) * 100%), rgba(91, 134, 83, 0.7), rgb(24, 31, 24)) no-repeat 0 0;
+    animation-name: mainAnimation;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+
+main h1 {
+    text-shadow: 0 0 20px white;
+    transition: .6s ease-out;
+    font-size: 20px;
+    animation-name: textAnimation;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+main:hover {
+    scale: 1.1;
+    background-color: rgba(255,255,255,.1);
+            transition: all 0.4s ease-in-out;
+}
+
+main h1:hover {
+    text-shadow: 0 0 40px white;
+}
+
+@keyframes canvaAnimation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .3;
+    }
+}
+
+@keyframes mainAnimation {
+    0% {
+        opacity: 0;
+        border-radius: 50%;
+        box-shadow: 0 0 150px white;
+        width: 0;
+        height: 0;
+        font-size: 0;
+    }
+    100% {
+        box-shadow: 0 0 100px white;
+        width: 400px;
+        height: 400px;
+        font-size: 1rem; 
+        border-radius: 50%;
+        opacity: 1;
+    }
+}
+
+@keyframes textAnimation {
+    0% {
+        font-size: 0;
+    }
+    30% {
+        font-size: .5rem;
+    }
+    100% {
+        font-size: 3rem;
+    }
+}
