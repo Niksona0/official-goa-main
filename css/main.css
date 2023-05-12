@@ -23,7 +23,7 @@ body {
 }
 
 .main-bg-cover {
-    width: 100%;
+    width: 100vw;
     height: 5000px;
     position: absolute;
     background: rgba(23, 39, 7, 0.41);
@@ -464,7 +464,7 @@ button:hover {
 
 .contact {
     width: 1100px;
-    height: 650px;
+    height: 700px;
     position: absolute;
     border-radius: 10px;
     outline: 1px solid #fff;
@@ -496,16 +496,11 @@ button:hover {
     text-shadow: 0 0 30px #0b5215;
 }
 
-.contact {
-    display: flex;
-}
-
 form {
     display: flex;
     flex-direction: column;
     position: relative;
 }
-
 
 input, textarea, button {
     margin: 15px;
@@ -594,8 +589,6 @@ input, select, textarea{
     top: 7px;
     right: 5px;
 }
-
-
 
 .yt p {
     position: relative;
