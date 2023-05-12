@@ -166,8 +166,9 @@
                 <form action="https://formsubmit.co/site.goalmail@gmail.com" method="post">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_subject" value="ახალი მეილი !!!">
-                    <input type="text" placeholder="სახელი" id="name" required>
-                    <input type="email" placeholder="მეილი" id="email" required>
+                    <input type="hidden" name="_autoresponse" value="GOA ის მოდერატორი მალე დაგიკავშირდებათ.">
+                    <input type="text" placeholder="სახელი" id="name" name="text" required>
+                    <input type="email" placeholder="მეილი" id="email" name="email" required>
                     <input type="hidden" name="_next" value="https://goa-official.netlify.app/next.html">
                     <textarea name="message" id="message" cols="30" rows="10" placeholder="მესიჯი" required></textarea>
                     <button id="btn">გაგზავნა</button>
