@@ -36,7 +36,7 @@ canvas {
     opacity: 1;
     width: 100%;
     animation-name: canvaAnimation;
-    animation-duration: 11s;
+    animation-duration: 4s;
     animation-fill-mode: forwards;
 }
 
