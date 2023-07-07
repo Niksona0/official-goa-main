@@ -8,23 +8,27 @@
     box-sizing: border-box;
     font-family: 'ALK Rex Bold', sans-serif;
     scroll-behavior: smooth;
+
 }
+
 
 body {
     font-size: 16px;
-    height: 5000px;
     overflow-x: hidden;
     background-image: url(/images/goa-bg.jpg);
     background-size: contain;
+    background-repeat: repeat-y;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #fff;
+  
 }
 
 .main-bg-cover {
     width: 100vw;
-    height: 5000px;
+    height: 105%;
     position: absolute;
     background: rgba(23, 39, 7, 0.41);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -45,20 +49,24 @@ a {
     position: absolute;
 }
 
+#zero {
+    top: 0%;
+}
+
 #first {
-    top: 0;
+    top: 14.8%;
 }
 
 #second {
-    top: 940px;
+    top: 28.6%;
 }
 
 #third {
-    top: 1845px;
+    top: 43.7%;
 }
 
 #fourth {
-    top: 3900px;
+    top: 87%;
 }
 
     /* width */
@@ -152,6 +160,32 @@ li:hover::after {
     transform-origin: bottom left;
 }
 
+
+main {
+    margin-top: 15%;
+}
+
+/* IFRAME VID */
+.vid-main {
+    width: 90%;
+    height: 80vh;
+    border-radius: 10px;
+    outline: 1px solid #fff;
+    background: rgb(66,99,58);
+    background: linear-gradient(90deg, rgba(66,99,58,0.3) 0%, rgba(27,73,25,0.5) 0%, rgba(34,73,10,0.5) 50%, rgba(168,189,168,0.3) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 1.5%;
+}
+
+iframe {
+    width: 99%;
+    height: 98%;
+    border-radius: 20px;
+}
+
 /* MAIN */
 
 .home {
@@ -165,10 +199,11 @@ li:hover::after {
     align-items: center;
     flex-direction: column;
     position: relative;
-    top: 2%;
     padding: 30px;
-    overflow: hidden
+    overflow: hidden;
+    position: relative;
 }
+
 
 .hero-txt {
     color: white;
@@ -224,20 +259,19 @@ ol li {
 
 .courses {
     position: relative;
-    margin-top: 350px;
-    width: 1500px;
-    height: 700px;
+    width: 80%;
+    height: 750px;
     border-radius: 10px;
     outline: 1px solid #fff;
     background: rgb(66,99,58);
     background: linear-gradient(90deg, rgba(66,99,58,0.3) 0%, rgba(27,73,25,0.5) 0%, rgba(34,73,10,0.5) 50%, rgba(168,189,168,0.3) 100%);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 50px;
+
 }
 
-.courses section {
-    padding: 0 50px;
-}
 
 .tech, .graphical {
     width: 50%;
@@ -250,7 +284,7 @@ ol li {
     margin-bottom: 40px;
 }
 
-.tech .title {
+.title {
     text-shadow: 0 0 10px #53f669;
 }
 
@@ -261,7 +295,6 @@ ol li {
 .courses .cont {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .cont ul {
@@ -277,10 +310,9 @@ ol li {
 }
 
 .cont-list h2 {
-    margin-bottom: 25px;
     text-align: center;
-    margin-top: 20px;
     text-shadow: 0 0 20px #53f669;
+    margin-top: 80px;
 }
 
 .graphical h2 {
@@ -291,6 +323,14 @@ ol li {
     max-width: 500px;
     text-align: center;
     margin: 0 auto;
+}
+
+.cont-btn {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
 }
 
 button {
@@ -304,11 +344,11 @@ button {
     transition: .5s;
     color: #0b5215;
     position: relative;
-    left: 34%;
+
 }
 
 button:hover {
-    border: 3px solid white;
+    outline: 1px solid white;
     background-color: rgba(255, 255, 255, 0);
     color: white;
 }
@@ -317,7 +357,7 @@ button:hover {
 
 .about {
     width: 1100px;
-    height: 1800px;
+    height: 100%;
     position: relative;
     border-radius: 10px;
     outline: 1px solid #fff;
@@ -329,7 +369,7 @@ button:hover {
     padding: 30px;   
     color: #fff;
     overflow: hidden;
-    top: 200px;
+
 }
 
 .about h1 {
@@ -359,7 +399,8 @@ button:hover {
 }
 
 .about .sec-h2 {
-    font-size: 1.6rem;
+    font-size: 2rem;
+    margin-top: 20px;
 }
 
 .about section ul {
@@ -376,6 +417,10 @@ button:hover {
     font-size: .9rem;
     line-height: 2em;
     margin-top: 20px;
+}
+
+.reviews .row img {
+    width: 100%;
 }
 
 .c4 {
@@ -433,6 +478,7 @@ button:hover {
     height: 350px;
     margin: 10px;
     border-radius: 5px;
+    border: 1px solid white;
 }
 
 .x {
@@ -465,7 +511,7 @@ button:hover {
 .contact {
     width: 1100px;
     height: 700px;
-    position: absolute;
+    position: relative;
     border-radius: 10px;
     outline: 1px solid #fff;
     background: rgb(66,99,58);
@@ -475,8 +521,9 @@ button:hover {
     flex-direction: column;
     padding: 30px;   
     color: #fff;
-    top: 4100px;
     overflow: hidden;
+
+    
 }
 
 .hero-txt {
@@ -590,8 +637,97 @@ input, select, textarea{
     right: 5px;
 }
 
-.yt p {
-    position: relative;
-    top: 7px;
-    right: 5px;
+.cont p:hover {
+    text-decoration: underline;
+}
+
+.return {
+    position: absolute;
+    right: 30px;
+    top: 20%;
+}
+
+
+@media only screen and (max-width: 1240px) {
+    main {
+        width: 85% !important;
+        height: 100%;
+        
+    }
+    .resp-dissapear {
+        display: none;
+    }
+    header nav {
+        display: none;
+    }
+    .return {
+        display: inline-block;
+    }
+
+    .logo img {
+        margin: 0;
+    }
+    .home {
+        width: 90%;
+    }
+    .hero-txt {
+        font-size: 2rem;
+    }
+    .desc-cont h2{
+        font-size: 80%;
+    }
+    .desc-cont ol {
+        text-align: center;
+    }
+    .desc-cont ol li {
+        font-size: .8rem;
+        margin-bottom: 20px;
+    }
+
+    .courses {
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .graphical h1 {
+        margin-top: 50px;
+    }
+
+    .projects, .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .projects img {
+        margin: 30px auto;
+    }
+    .x img {
+        width: auto !important;
+    }
+    .contact {
+        height: 850px;
+    }
+    .contact-sect {
+        height: 100%;
+    }
+    .lil-box {
+        bottom: -30px;
+        left: 0px;
+        position: relative;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .lil-box h2 {
+        margin-bottom: 20px;
+    }
+    textarea {
+        width: 80%;
+    }
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 702px) {
+
 }
