@@ -423,7 +423,7 @@ button:hover {
     margin-top: 20px;
 }
 
-.about hr {
+.wid-70{
     width: 70vw;
 }
 
@@ -772,5 +772,12 @@ input, select, textarea{
     .about section{
         width: 100vw;
         text-align: center;
+    }
+
+
+
+    .reviews .x img {
+        height: 250px;
+        transform: translateX(-8px);
     }
 }
