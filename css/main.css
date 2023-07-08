@@ -69,6 +69,10 @@ a {
     top: 87%;
 }
 
+.resp-appear {
+    display: none;
+}
+
     /* width */
 ::-webkit-scrollbar {
     width: 5px;
@@ -419,6 +423,10 @@ button:hover {
     margin-top: 20px;
 }
 
+.about hr {
+    width: 70vw;
+}
+
 .reviews .row img {
     width: 100%;
 }
@@ -725,9 +733,44 @@ input, select, textarea{
     }
     .title {
         font-size: 1.5rem;
+        text-align: center;
     }
 }
 
 @media only screen and (max-width: 702px) {
-
+    header {
+        height: 100px;
+    }
+    .logo img {
+        width: 80px;
+        position: absolute;
+        left: 50px;
+        top: 10px;
+    }
+    .desc-cont h2 {
+        font-size: .8rem;
+        animation: none;
+        text-align: center;
+    }
+    .resp-appear {
+        display: inline;
+    }
+    .home h1, .about h1 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .courses {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 0;
+    }
+    .about h2 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    .about section{
+        width: 100vw;
+        text-align: center;
+    }
 }
